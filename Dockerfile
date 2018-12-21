@@ -38,4 +38,4 @@ WORKDIR /home/ruser
 #ENTRYPOINT R -e "Rserve::run.Rserve(remote=TRUE)" 
 
 EXPOSE 80
-ENTRYPOINT R -e "Rserve::run.Rserve(remote=TRUE)" 
+ENTRYPOINT R -e "Rserve::run.Rserve(remote=TRUE,websockets.qap=TRUE,websockets.port=80)" 
