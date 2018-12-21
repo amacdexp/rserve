@@ -34,5 +34,8 @@ RUN useradd -d /home/ruser -ms /bin/bash -g root -G sudo -p password ruser
 USER ruser
 WORKDIR /home/ruser
 
-EXPOSE 6311
+#EXPOSE 6311
+#ENTRYPOINT R -e "Rserve::run.Rserve(remote=TRUE)" 
+
+EXPOSE 80
 ENTRYPOINT R -e "Rserve::run.Rserve(remote=TRUE)" 
